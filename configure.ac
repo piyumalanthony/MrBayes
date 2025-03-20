@@ -198,6 +198,7 @@ AS_IF([test "x$with_beagle" != "xno"], [
     AS_IF([test "x$beagle_found" != "xyes"], [
         AC_MSG_WARN([Failed to locate Beagle, falling back on pkg-config])
 
+             m4_pattern_allow([PKG_CHECK_MODULES])
              PKG_CHECK_MODULES([BEAGLE], [$beagle_pkg_name],
                 [AC_MSG_NOTICE([Found Beagle with pkg-config])
                  beagle_found="yes"
